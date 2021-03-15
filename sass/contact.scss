@@ -1,0 +1,205 @@
+/* Column Data */
+.cols {
+    display: inline-grid;
+    grid-template-columns: 15fr 475px;
+    grid-gap: 1rem;
+    margin: 1rem;
+    box-sizing: border-box;
+    color: #010101; /* #4497e2 */
+    font-size: 120%;
+    justify-items: center;
+    box-sizing: border-box;
+}
+
+.leftCol {
+    padding: 1em;
+    border-right: 1px solid #79b8c9; 
+}
+
+.rightCol {
+    width: 100%;
+    text-align: left;
+    padding: 1em 3em;
+}
+
+/* Responsively converts from two columns to rows. */
+@media (max-width: 526px) {
+	.cols {
+		display: block;
+	}
+	.leftCol {
+        border: none;
+        padding-right: 1em;
+    }
+    .rightCol {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+textarea,
+input[type="text"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    border-radius: 2px;
+    border: none;
+    border: solid 1px;
+    color: inherit;
+    display: inline-block;
+    font-size: 16px;
+    outline: 0;
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 1em;
+    min-width: 0;
+
+    background: rgba(144, 144, 144, 0.075);
+    border-color: rgba(144, 144, 144, 0.25);
+}
+
+#inputRow {
+    max-width: 920px;
+    margin: 6px;
+    display: flex;
+    margin: 0 -.25rem;
+}
+
+textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    margin: 0;
+    width: 100%;
+    height: 30rem;
+    padding: 1rem 1rem;
+}
+
+#covid_message {
+    height: 5rem;
+}
+
+#spacing_container {
+    max-width: 902px;
+    text-align: left;
+    margin: 6px;
+    padding: 0px;
+}
+
+#inputRow > input[type="text"] {
+    display: block;
+    width: calc(100% - 18px);
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#inputRow {
+    display: block;
+    padding: 0;
+    border-width: 0;
+    margin-bottom: 0;
+}
+
+#spacing_container {
+    margin-top: 0;
+}
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: left;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.submitButton {
+    cursor: pointer;
+    border-radius: 4px;
+    border: 3px solid white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    -webkit-transition: background-color 0.6s;
+    transition: background-color 0.6s;
+
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px rgba(144, 144, 144, 0.25);
+    color: #555 !important;
+}
+
+.submitButton:hover {
+    border-color: rgba(0, 0, 0, 0.1);
+
+    background-color: rgba(100, 100, 100, 0.1);
+}
+
+.submitButton:active {
+    background-color: #e6e6e6;
+}

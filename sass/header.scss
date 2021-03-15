@@ -1,0 +1,94 @@
+header {
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.header-mobile {
+    min-height: 4em;
+
+    background-color: #333333;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+
+    a:link, a:visited {
+        background-color: #333333;
+        color: rgb(68, 163, 226);
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 500;
+
+        width: 100vw;
+        height: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+      }
+}
+
+.header-desktop {
+    width: 100vw;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+
+    height: 4em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #333333;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a {
+        position: relative;
+        color: #020202;
+        color: rgb(68, 163, 226); //rgb(86, 226, 68);
+        text-shadow: 0px 0px 1.5px rgb(79, 229, 255); //rgb(100, 255, 79);
+        text-decoration: none;
+        font-size: 22px;
+        margin: 8px 18px;
+        
+    }
+
+    a:hover {
+        top: -2px;
+    }
+}
+
+/* Responsively hides the standard navbar, and replaces it with the mobile navbar. */
+@media (max-width: 700px) {
+	.header-desktop {
+		display: none !important;
+	}
+	.header-mobile {
+		display: flex !important;
+	}
+}
+
+.sticky {
+    position:fixed;
+    top: 0px;
+    left: 0px;
+}

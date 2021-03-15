@@ -1,0 +1,73 @@
+<!DOCTYPE html5>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Contact - Quincy Computers</title>
+
+    <meta name="Description" content="Contact form for Quincy Computers.">
+    <meta name="keywords" content="Contact, Quincy, Computer, Computers, Reapir, Service">
+
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/navbar.js"></script>
+</head>
+
+<body>
+    <%- include('includes/header'); %>
+
+    <article class = "content centered" style="font-size: 110%;">
+        <h1 style="font-size: 32px;">Contact Us</h1>
+        <hr>
+        <div class = "cols right">
+            <div class = "leftCol centered">
+                <form style = "text-align: center;" action="/send-message" method="POST">
+                    <p>
+                        <%= message ? message : '' %> 
+                    </p>
+                    <input type="text" id="name" name="name" placeholder="Name" value="<%= responses.name ? responses.name : '' %>">
+                    <input type="text" id="email" name="email" placeholder="Email" value="<%= responses.email ? responses.email : '' %>">
+                    <input type="text" id="phone" name="phone" placeholder="Phone #" value="<%= responses.phone ? responses.phone : '' %>">
+                    <br>
+                    <textarea id="message" name="message" placeholder="Enter the details of your computer issue or other request." style="height:200px"><%= responses.message ? responses.message : '' %></textarea>
+                    <br>
+                    <br>
+                    <label class="container">I want a response by email
+                        <input type="checkbox" checked="checked" id="email_response" name="email_response">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">I want a response by phone
+                        <input type="checkbox" id="phone_response" name="phone_response">
+                        <span class="checkmark"></span>
+                    </label>
+                    <input type="submit" class="submitButton">
+                </form>
+            </div>
+
+            <div class = "rightCol">
+                <div class = "contactContainer">
+                    <h3>Text Us</h3>
+                    <p><a href="tel:(734) 780-1528">(734) 780-1528</a></p>
+                </div>
+                <div class = "contactContainer">
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:admin@quincycomputers.com">admin@quincycomputers.com</a></p>
+                </div>
+                <div class = "contactContainer">
+                    <h3>Social Media</h3>
+                    <p><a href="mailto:admin@quincycomputers.com">Facebook</a></p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <%- include('includes/footer'); %>
+</body>
+
+</html>

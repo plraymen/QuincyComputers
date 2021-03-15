@@ -1,0 +1,40 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    min-height:6.5em; 
+    background: #010111;
+    color: #BBBBBB;
+
+    width: 100vw;
+
+    /* Sticky Footer */
+    margin-top:auto;
+
+    a:link, a:visited {
+        color: #BBBBBB;
+        padding: 0 4px;
+        text-align: center;
+        text-decoration: underline;
+        font-weight: 500;
+      }
+      
+      a:hover, a:active {
+        color: #999999;
+      }
+
+    .footerContent {
+        line-height:150%;
+    }
+
+    .fa {
+        text-decoration: none !important;
+        font-size: 150%;
+    }
+}
+
+@media (max-width: 400px) {
+  footer {
+    min-height:10.5em; 
+  }
+}

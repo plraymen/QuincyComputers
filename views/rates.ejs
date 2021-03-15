@@ -1,0 +1,66 @@
+<!DOCTYPE html5>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="Description" content="Rates for Quincy Computers.">
+    <meta name="keywords" content="Rates, Quincy, Computer, Computers, Reapir, Service">
+    
+    <title>Rates - Quincy Computers</title>
+
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/navbar.js"></script>
+</head>
+
+<body>
+    <%- include('includes/header'); %>
+
+    <article class = "content centered" style="font-size: 110%;">
+        <h1 style="font-size: 32px;">Rates</h1>
+        <hr>
+        <br>
+        <p>Looking to commission one of these services? <a href="contact.html">Submit your request online.</a></p> 
+        <br>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Estimated Rate*</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Device Tune-Up / Virus Removal</td>
+                    <td>$20 - $40</td>
+                </tr>
+                <tr>
+                    <td>Device setup/Repair</td>
+                    <td>$25 - $50</td>
+                </tr>
+                <tr>
+                    <td>Website Construction</td>
+                    <td><a href="contact.html">Ask for Quote</a></td>
+                </tr>
+                <tr>
+                    <td>Software setup</td>
+                    <td>$20 - $40</td>
+                </tr>
+                <tr>
+                    <td colspan="2">* Rates are an estimation only, and will vary based on the complexity of the issue. We will not charge until the job is completed.</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <%- include('includes/footer'); %>
+</body>
+
+</html>

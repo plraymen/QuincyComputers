@@ -1,0 +1,23 @@
+.services-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    flex-wrap: wrap;
+
+    .service {
+        margin: 30px;
+        max-width: 300px;
+        display: inline-block;
+
+
+        &-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        &-details {
+            line-height: 1.5;
+        }
+    }
+}

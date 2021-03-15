@@ -1,0 +1,48 @@
+@import './variables.scss';
+@import './splash.scss';
+@import './footer.scss';
+@import './header.scss';
+@import './services.scss';
+@import './rates.scss';
+@import './privacy.scss';
+@import './contact.scss';
+
+
+body {
+    background-color: $background-color-page;
+    height:100vh;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+
+    /* Flex Display for sticky header / footer */
+    display:flex; 
+    flex-direction:column;
+
+    overflow-x: hidden;
+}
+
+.centered {
+    text-align: center;
+}
+
+.content {
+    margin-top: 4em;
+
+    a:link, a:visited {
+        color: #4497e2;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 500;
+    }
+      
+    a:hover, a:active {
+        color: #7ab7ec;
+    }
+}
+
+hr {
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(68, 151, 226, 0), rgb(68, 163, 226, 0.75), rgba(68, 151, 226, 0));
+}
